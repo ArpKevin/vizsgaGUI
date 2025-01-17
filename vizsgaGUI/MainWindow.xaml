@@ -1,0 +1,20 @@
+﻿<Window x:Class="vizsgaGUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:vizsgaGUI"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Label x:Name="osszesenHanyDiakLabel" Content="" HorizontalAlignment="Left" Margin="31,28,0,0" VerticalAlignment="Top"/>
+        <ListBox x:Name="tanulokListbox" Margin="10,59,579,39"/>
+        <Button x:Name="sikeresVizsgatTettGomb" Content="Sikeres vizsgát tett" HorizontalAlignment="Left" Margin="353,59,0,0" VerticalAlignment="Top" Click="sikeresVizsgatTettGomb_Click"/>
+        <Label x:Name="sikeresVizsgaLabel" Content="" HorizontalAlignment="Left" Margin="512,54,0,0" VerticalAlignment="Top"/>
+        <Button Content="Eredmények állományba írása" HorizontalAlignment="Left" Margin="324,109,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <Label Content="Keresett tanuló" HorizontalAlignment="Left" Margin="456,180,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tanuloTextbox" HorizontalAlignment="Left" Margin="456,211,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="tanuloTextbox_TextChanged"/>
+        <Label x:Name="tanuloEredmenye" Content="" HorizontalAlignment="Left" Margin="468,250,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
