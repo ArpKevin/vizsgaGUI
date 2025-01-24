@@ -53,11 +53,10 @@ namespace vizsgaGUI
 
         private void tanuloTextbox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            tanuloEredmenye.Content = string.Empty;
-            if (vizsgazok.Exists(v => v.Nev.Contains(tanuloTextbox.Text)))
-            {
-                var keresettTanulo = vizsgazok.First(v => v.Nev.Contains(tanuloTextbox.Text));
+            var keresettTanulo = vizsgazok.FirstOrDefault(v => v.Nev.IndexOf(tanuloTextbox.Text, StringComparison.OrdinalIgnoreCase) >= 0);
 
+            if (keresettTanulo != null)
+            {
                 tanuloEredmenye.Content = $"Legjobb eredménye: {keresettTanulo.Modulok.Max()*100}%\nLeggyengébb eredménye: {keresettTanulo.Modulok.Min()*100}%\n{(keresettTanulo.erdemjegy(keresettTanulo.Modulok) == "elégtelen" ? "Sikertelen vizsgát tett" : "Sikeres vizsgát tett" )}";
             }
             else
